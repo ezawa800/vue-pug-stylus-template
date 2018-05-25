@@ -10,31 +10,28 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus">
 /* global style */
 html,
-body {
-  margin: 0;
-  padding: 0;
-}
+body
+  margin 0
+  padding 0
 </style>
 
-<style scoped>
-#app{
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
+<style lang="stylus" scoped>
+#app
+  width 100%
+  height 100vh
+  margin 0
+  padding 0
 
-#content{
-  width: 100%;
-  height: 100%;
+#content
+  width 100%
+  height 100%
 
-  margin: 0;
-  padding: 0;
+  margin 0
+  padding 0
 
-  display: flex;
-  flex-direction: column;
-}
+  display flex
+  flex-direction column
 </style>

@@ -9,8 +9,7 @@ export default {
 }
 </script>
 
-<style scoped>
-p {
-  font-size: 1.25em;
-}
+<style lang="stylus" scoped>
+p
+  font-size 1.25em
 </style>
