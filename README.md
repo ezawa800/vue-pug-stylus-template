@@ -1,9 +1,9 @@
 # vue-pug-stylus-template
 
-The template with Vue.js + Pug + Stylus.
-You can generate templated project using this template and [vuejs/vue-cli](https://github.com/vuejs/vue-cli)
+The template with Vue.js + Pug + Stylus.  
+You can generate templated project using this template and [vuejs/vue-cli](https://github.com/vuejs/vue-cli).
 
-This template is based on [potato4d/vue-dev-template](https://github.com/potato4d/vue-dev-template)
+This template is based on [potato4d/vue-dev-template](https://github.com/potato4d/vue-dev-template).
 
 # Usage
 
