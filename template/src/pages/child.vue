@@ -1,8 +1,7 @@
-<template>
-  <div class="content">
-    <router-link to="/">Back to top</router-link>
-    <p>child page</p>
-  </div>
+<template lang="pug">
+  .content
+    router-link(to='/') Back to top
+    p child page
 </template>
 
 <script>

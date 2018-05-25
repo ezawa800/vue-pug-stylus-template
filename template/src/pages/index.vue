@@ -1,8 +1,7 @@
-<template>
-  <div class="content">
-    <router-link to="/child">Go to child</router-link>
-    <MyGreeting :name="appName" />
-  </div>
+<template lang="pug">
+  .content
+    router-link(to='/child') Go to child
+    MyGreeting(:name='appName')
 </template>
 
 <script>

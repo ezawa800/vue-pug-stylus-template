@@ -1,7 +1,5 @@
-<template>
-  <p>
-    Hello, {{name}}
-  </p>
+<template lang="pug">
+  p Hello, {{name}}
 </template>
 
 <style scoped>

@@ -1,53 +1,59 @@
-const path = require('path')
-const webpack = require('webpack')
-const Dotenv = require('dotenv-webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require("path");
+const webpack = require("webpack");
+const Dotenv = require("dotenv-webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'static')
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "static")
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: "vue-loader",
         options: {
           loaders: {
-            js: 'babel-loader',
-            css: ['vue-style-loader', 'css-loader'],
-          },
+            js: "babel-loader",
+            css: ["vue-style-loader", "css-loader"]
+          }
         }
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        loader: "style-loader!css-loader"
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/
+      },
+      {
+        test: /\.pug$/,
+        loader: "pug-loader"
       }
     ]
   },
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.esm.js',
-      '@': path.resolve(__dirname, 'src/'),
+      vue: "vue/dist/vue.esm.js",
+      "@": path.resolve(__dirname, "src/")
     }
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'static'),
-    publicPath: '/',
+    contentBase: path.resolve(__dirname, "static"),
+    publicPath: "/",
     historyApiFallback: true,
     open: true
   },
   plugins: [
-    new Dotenv({ path: './.env', safe: true }),
+    new Dotenv({ path: "./.env", safe: true }),
     new HtmlWebpackPlugin({
-      filename: 'index.html', template: 'index.html', inject: true
+      filename: "index.html",
+      template: "index.pug",
+      inject: true
     })
   ]
-}
+};
